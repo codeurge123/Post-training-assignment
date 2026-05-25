@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function EmptyState({ title, description, action }) {
   return (
     <div className="rounded-lg border border-dashed border-stone-300 bg-white/70 p-8 text-center dark:border-slate-700 dark:bg-slate-900/70">

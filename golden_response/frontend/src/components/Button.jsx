@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Button({ children, className = "", variant = "primary", ...props }) {
   const styles = {
     primary: "bg-ink text-white hover:bg-ink/90 dark:bg-mint dark:text-slate-950",

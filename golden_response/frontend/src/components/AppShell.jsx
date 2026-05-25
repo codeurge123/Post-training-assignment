@@ -1,3 +1,4 @@
+import React from "react";
 import { Bell, LogOut, Moon, Plus, SunMedium, Users } from "lucide-react";
 import Button from "./Button";
 import { useAuth } from "../context/AuthContext";

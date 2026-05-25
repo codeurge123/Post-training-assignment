@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function StatCard({ label, value, icon: Icon, tone = "mint" }) {
   const tones = {
     mint: "bg-mint/15 text-mint",

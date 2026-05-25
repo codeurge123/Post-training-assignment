@@ -62,6 +62,7 @@ PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/expense_splitter
 JWT_SECRET=replace-with-a-long-random-secret
 CLIENT_URL=http://localhost:5173
+CLIENT_URLS=http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000
 ```
 
 ### 3. Start MongoDB
@@ -77,6 +78,8 @@ npm run dev
 Frontend: `http://localhost:5173`
 
 Backend health check: `http://localhost:5000/api/health`
+
+If your frontend runs on another domain or port, add it to `CLIENT_URLS` as a comma-separated origin. The backend already allows common local React/Vite origins and handles CORS preflight requests.
 
 ## API Summary
 
