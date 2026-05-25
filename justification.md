@@ -189,10 +189,7 @@ Good implementation overall but more conventional.
 # Final Verdict
 
 ## Likert Scale Rating
-**6/7**
-
-According to the rubric pattern shown in the uploaded PDF evaluation example, the best response should receive a high Likert score when it demonstrates stronger production-readiness, correctness, architecture quality, and alignment with the prompt goals.
-
+**6**
 ---
 
 # Final Winner — Response A (Gemini)
@@ -204,8 +201,3 @@ The settlement optimization logic is significantly more advanced than the simpli
 Response B is still highly valuable because it is more beginner-friendly and easier to implement step-by-step. However, it sacrifices depth and production realism for simplicity.
 
 ---
-
-# Conclusion
-
-- **If the goal is learning → Response B is better**
-- **If the goal is building a scalable fintech-grade startup MVP → Response A is clearly superior**
