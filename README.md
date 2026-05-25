@@ -1,359 +1,124 @@
 # AI-Powered Smart Expense Splitter
 
-## Project Overview
+A full-stack MERN Expense Splitter for friends, roommates, flats, trips, and outings. It supports JWT authentication, group management, equal/custom expense splitting, bill image uploads, settlement minimization, notifications, charts, and rule-based AI spending insights.
 
-AI-Powered Smart Expense Splitter is a full-stack MERN application designed to simplify shared expense management for roommates, college students, travel groups, and friends living together.
+## Stack
 
-Managing expenses manually in chats or notes often creates confusion about:
+- Frontend: React, Vite, Tailwind CSS, Recharts, Framer Motion, Lucide icons
+- Backend: Node.js, Express.js, MongoDB, Mongoose, JWT, Bcrypt, Multer
+- Security: Helmet, rate limiting, XSS cleanup, validation, hashed passwords, env-based secrets
 
-* Who paid
-* Who owes money
-* Pending balances
-* Settlement calculations
-
-This platform automates the entire process using intelligent expense tracking, debt minimization algorithms, AI-generated spending insights, and secure financial record management.
-
-The application focuses on scalability, security, clean UI/UX, and production-level backend architecture.
-
----
-
-# Features
-
-## Core Features
-
-* User Authentication (JWT-based)
-* Group Creation & Management
-* Add/Edit/Delete Expenses
-* Equal & Custom Expense Splits
-* Smart Debt Simplification
-* Real-Time Balance Tracking
-* Expense Categories
-* Bill Upload Support
-* AI-Based Spending Insights
-* Dashboard Analytics
-* Secure REST APIs
-* Mobile Responsive UI
-
----
-
-# Smart Settlement Engine
-
-The application uses a greedy debt minimization algorithm to reduce the total number of transactions required among group members.
-
-### Example
-
-Instead of:
-
-* A pays B → ₹500
-* B pays C → ₹500
-
-The system simplifies it to:
-
-* A pays C → ₹500
-
-This minimizes unnecessary money transfers and improves settlement clarity.
-
----
-
-# Tech Stack
-
-## Frontend
-
-* React.js
-* Tailwind CSS
-* React Router DOM
-* Axios
-* Framer Motion
-* Chart.js
-
-## Backend
-
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* JWT Authentication
-* Bcrypt.js
-* Multer
-
-## AI Integration
-
-* Gemini API / Google Gen AI SDK
-
-## Optional Integrations
-
-* Cloudinary
-* Socket.IO
-* OCR APIs
-
----
-
-# Folder Structure
+## Project Structure
 
 ```bash
-expense-splitter/
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── hooks/
-│   │   ├── context/
-│   │   ├── assets/
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│
-├── backend/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   ├── config/
-│   ├── server.js
-│   └── package.json
+backend/
+  src/
+    config/
+    controllers/
+    middleware/
+    models/
+    routes/
+    utils/
+frontend/
+  src/
+    components/
+    context/
+    pages/
+    services/
+    utils/
 ```
 
----
+## Features
 
-# Database Models
+- Register/login with JWT authentication
+- Create groups for trips, flats, outings, and other shared expenses
+- Add members by registered email
+- Add expenses with title, amount, category, payer, equal/custom split, and bill image
+- View total expenses, member balances, transactions, monthly charts, and category charts
+- Generate settlement suggestions with a greedy debt minimization algorithm
+- Record settlements and update balances
+- Send and store in-app notifications for expenses, reminders, settlements, and member changes
+- Generate rule-based insights for highest category, spending trends, active spender, budget warnings, and cost-cutting suggestions
+- Responsive UI with dark/light mode, loading states, empty states, and validation errors
 
-## User Model
+## Setup
 
-Stores:
-
-* Name
-* Email
-* Password
-* Avatar
-
-## Group Model
-
-Stores:
-
-* Group name
-* Members
-* Group creator
-
-## Expense Model
-
-Stores:
-
-* Expense title
-* Amount
-* Category
-* Payer
-* Split information
-* Bill image
-* Group reference
-
----
-
-# API Endpoints
-
-## Authentication
+### 1. Install dependencies
 
 ```bash
-POST /api/auth/register
-POST /api/auth/login
-GET  /api/auth/profile
+npm run install:all
 ```
 
-## Groups
+### 2. Configure backend environment
 
 ```bash
-POST   /api/groups/create
-GET    /api/groups/:id
-PUT    /api/groups/add-member
-DELETE /api/groups/remove-member
+cp backend/.env.example backend/.env
 ```
 
-## Expenses
-
-```bash
-POST   /api/expenses/add
-GET    /api/expenses/group/:groupId
-PUT    /api/expenses/:id
-DELETE /api/expenses/:id
-```
-
-## Settlements
-
-```bash
-GET  /api/settlements/:groupId
-POST /api/settlements/pay
-```
-
----
-
-# AI Spending Insights
-
-The platform analyzes historical expense patterns and generates:
-
-* Spending trends
-* Budget warnings
-* Expense category summaries
-* Cost-saving suggestions
-
-Example:
-
-* “Food spending increased by 35% this month.”
-* “Travel expenses exceeded the average weekly budget.”
-
----
-
-# Installation & Setup
-
-## Clone Repository
-
-```bash
-git clone https://github.com/your-username/expense-splitter.git
-cd expense-splitter
-```
-
----
-
-# Backend Setup
-
-```bash
-cd backend
-npm install
-```
-
-## Create `.env`
+Update `backend/.env` if needed:
 
 ```env
 PORT=5000
-MONGO_URI=your_mongodb_connection
-JWT_SECRET=your_secret_key
-GEMINI_API_KEY=your_gemini_api_key
-CLOUDINARY_API_KEY=your_cloudinary_key
+MONGO_URI=mongodb://127.0.0.1:27017/expense_splitter
+JWT_SECRET=replace-with-a-long-random-secret
+CLIENT_URL=http://localhost:5173
 ```
 
-## Start Backend Server
+### 3. Start MongoDB
+
+Use a local MongoDB server or MongoDB Atlas. For local development, make sure MongoDB is listening at the `MONGO_URI` above.
+
+### 4. Run the app
 
 ```bash
 npm run dev
 ```
 
----
+Frontend: `http://localhost:5173`
 
-# Frontend Setup
+Backend health check: `http://localhost:5000/api/health`
 
-```bash
-cd frontend
-npm install
-```
+## API Summary
 
-## Start Frontend
+### Auth
 
-```bash
-npm run dev
-```
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `GET /api/auth/profile`
 
----
+### Groups
 
-# Security Features
+- `GET /api/groups`
+- `POST /api/groups`
+- `GET /api/groups/:id`
+- `POST /api/groups/:id/members`
+- `DELETE /api/groups/:id/members/:userId`
 
-The application includes multiple production-level security safeguards:
+### Expenses
 
-* JWT Authentication
-* Password Hashing
-* Rate Limiting
-* Input Validation
-* MongoDB Injection Prevention
-* XSS Protection
-* Secure Environment Variables
+- `GET /api/expenses/group/:groupId`
+- `POST /api/expenses`
+- `PUT /api/expenses/:id`
+- `DELETE /api/expenses/:id`
 
----
+### Settlements
 
-# Performance Optimizations
+- `GET /api/settlements/:groupId`
+- `POST /api/settlements/pay`
+- `POST /api/settlements/remind`
 
-* Lazy Loading
-* Optimized MongoDB Queries
-* Efficient Settlement Calculations
-* Responsive UI Rendering
-* API Rate Limiting
-* Optimized React Component Structure
+### Insights and Notifications
 
----
+- `GET /api/insights/:groupId`
+- `GET /api/notifications`
+- `PATCH /api/notifications/:id/read`
 
-# Deployment
+## Smart Settlement Logic
 
-## Frontend
+Each expense credits the payer and debits every split participant by their share. Completed settlements adjust the ledger. The backend then separates debtors and creditors and greedily matches them by amount, producing a small list of payment suggestions.
 
-Recommended:
+## Notes
 
-* Vercel
-* Netlify
-
-## Backend
-
-Recommended:
-
-* Render
-* Railway
-
-## Database
-
-* MongoDB Atlas
-
----
-
-# Future Enhancements
-
-## Planned Features
-
-* OCR Bill Scanning
-* Real-Time Notifications
-* PWA Support
-* Export PDF Reports
-* Multi-Currency Support
-* Recurring Expense Tracking
-* UPI Payment Integration
-* AI Budget Forecasting
-
----
-
-# Evaluation Methodology
-
-This project was designed and evaluated using production-quality software engineering principles:
-
-* Correctness
-* Scalability
-* Code Maintainability
-* Security
-* Performance Optimization
-* User Experience
-* API Design
-* Architectural Clarity
-
-The comparison between LLM-generated responses was performed using:
-
-* Dimension-wise evaluation
-* Likert scale scoring
-* Production readiness analysis
-* Completeness and correctness benchmarks
-
----
-
-# Project Outcome
-
-The AI-Powered Smart Expense Splitter acts as a modern fintech-style solution that:
-
-* Simplifies group expense management
-* Reduces payment confusion
-* Automates settlements
-* Provides intelligent spending analysis
-* Delivers a scalable startup-ready architecture
-
-This project is highly valuable for:
-
-* Full Stack Portfolio
-* Fintech Projects
-* Internship Applications
-* Startup MVPs
-* Resume Building
-
----
+- Bill images are saved to `backend/uploads` and served from `/uploads`.
+- AI insights are rule-based so the project works without external API keys.
+- For production, set a strong `JWT_SECRET`, use MongoDB Atlas, configure HTTPS, and store bill images in Cloudinary or another object store.
