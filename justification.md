@@ -1,4 +1,4 @@
-# Response Evaluation — Smart Expense Splitter Project
+# Response Evaluation — Smart Expense Splitter Project - POST TRAINING ASSIGNEMENT
 
 ## Overall Comparison
 
