@@ -185,12 +185,12 @@ Optional
 
 Scalability Requirements 
 
-The application architecture should:
-Support microservice migration in future
-Handle thousands of concurrent users
-Maintain low API response times
-Optimise database connections
-Use modular backend architecture
+1. The application architecture should:
+2. Support microservice migration in future
+3. Handle thousands of concurrent users
+4. Maintain low API response times
+5. Optimise database connections
+6. Use modular backend architecture
 
 Output Expectations
 
