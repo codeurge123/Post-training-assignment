@@ -22,7 +22,6 @@ The application should focus on usability, accuracy, responsiveness and clean us
 Frontend Requirements
 
 Main Features
-
 The application must include:
 1. User Authentication for Expense Splitter
 2. Group Creation and Management for Expense Splitter
@@ -32,7 +31,6 @@ The application must include:
 6. Settlement Summary Screen for Expense Splitter
 
 Expense Features
-
 Users should be able to:
 1. Add expenses with title, amount, category and payer to Expense Splitter
 2. Split expenses equally or by custom percentage in Expense Splitter
@@ -41,7 +39,6 @@ Users should be able to:
 5. View real-time balance updates in Expense Splitter
 
 Dashboard Requirements
-
 The dashboard should display:
 1. Total group expenses for Expense Splitter
 2. Individual pending balances for Expense Splitter
@@ -50,7 +47,6 @@ The dashboard should display:
 5. Category-wise expense breakdown for Expense Splitter
 
 UI Requirements
-
 The frontend must:
 1. Be fully responsive on mobile and desktop for Expense Splitter
 2. Include smooth transitions and loading animations for Expense Splitter
@@ -59,7 +55,6 @@ The frontend must:
 5. Show empty states and error messages for Expense Splitter
 
 Backend Requirements
-
 Implement backend APIs for:
 1. Authentication for Expense Splitter
 2. Expense management for Expense Splitter
@@ -69,7 +64,6 @@ Implement backend APIs for:
 6. Notification handling for Expense Splitter
 
 Authentication Requirements
-
 The system must implement:
 1. JWT authentication for Expense Splitter
 2. Secure password hashing for Expense Splitter
@@ -77,7 +71,6 @@ The system must implement:
 4. Session management for Expense Splitter
 
 Smart Split Logic
-
 The backend should:
 1. Calculate balances accurately for Expense Splitter
 2. Prevent duplicate transactions for Expense Splitter
@@ -86,7 +79,6 @@ The backend should:
 5. Support equal and unequal expense splitting for Expense Splitter
 
 AI Insight Requirements
-
 The application should generate insights such as:
 1. Highest spending category for Expense Splitter
 2. spending trends for Expense Splitter
@@ -97,7 +89,6 @@ The application should generate insights such as:
 The insights can be generated using simple ML models or rule-based analysis for Expense Splitter.
 
 Notification System
-
 The system must automatically send notifications when:
 1. New expenses are added to Expense Splitter
 2. Payment reminders are due for Expense Splitter
@@ -107,7 +98,6 @@ The system must automatically send notifications when:
 Notifications can be implemented using email or in-app alerts for Expense Splitter.
 
 Database Requirements
-
 Use MongoDB or PostgreSQL to store:
 1. User profiles for Expense Splitter
 2. Group details for Expense Splitter
@@ -119,7 +109,6 @@ Use MongoDB or PostgreSQL to store:
 The database should be scalable and properly structured for Expense Splitter.
 
 Data Processing Requirements
-
 The system must include efficient data processing mechanisms for handling financial transactions and analytics.
 
 The application should:
@@ -140,7 +129,6 @@ The application should:
 15. Optimise database queries using indexing and aggregation pipelines
 
 Validation and Security Requirements
-
 The application must:
 1. Validate all inputs properly for Expense Splitter
 2. Prevent unauthorised expense editing for Expense Splitter
@@ -150,7 +138,6 @@ The application must:
 6. Store credentials securely using environment variables for Expense Splitter
 
 Performance Requirements
-
 The system should:
 1. Load dashboards for Expense Splitter
 2. Use lazy loading where required for Expense Splitter
@@ -159,7 +146,6 @@ The system should:
 5. Handle concurrent users smoothly for Expense Splitter
 
 Error Handling Requirements
-
 The application must provide:
 1. Clear validation messages for Expense Splitter
 2. Structured API error responses for Expense Splitter
@@ -167,7 +153,6 @@ The application must provide:
 4. Proper backend logging for Expense Splitter
 
 Technology Stack
-
 Frontend
 1. React.js or Next.js for Expense Splitter
 2. Tailwind CSS for Expense Splitter
@@ -183,8 +168,15 @@ Optional
 1. Cloudinary for bill uploads for Expense Splitter
 2. Gemini API for AI-generated insights for Expense Splitter
 
-Output Expectations
+Scalability Requirements
+The application architecture should:
+1. Support microservice migration in future
+2. Handle thousands of concurrent users
+3. Maintain low API response times
+4. Optimise database connections
+5. Use modular backend architecture
 
+Output Expectations
 The final application should include:
 1. A responsive UI for Expense Splitter
 2. Functional expense splitting system for Expense Splitter
