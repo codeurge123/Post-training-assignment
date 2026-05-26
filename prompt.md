@@ -1,4 +1,4 @@
-AI-Powered Smart Expense Splitter for Friends & Roommates
+Prompt
 
 Context and Role
 
