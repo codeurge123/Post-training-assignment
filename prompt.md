@@ -109,6 +109,7 @@ Use MongoDB or PostgreSQL to store:
 The database should be scalable and properly structured for Expense Splitter.
 
 Data Processing Requirements
+
 The system must include efficient data processing mechanisms for handling financial transactions and analytics.
 
 The application should:
