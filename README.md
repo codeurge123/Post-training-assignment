@@ -2,6 +2,11 @@
 
 A full-stack MERN Expense Splitter for friends, roommates, flats, trips, and outings. It supports JWT authentication, group management, equal/custom expense splitting, bill image uploads, settlement minimization, notifications, charts, and rule-based AI spending insights.
 
+## Demo 
+
+![alt text](<Screenshot 2026-05-26 154419.png>)
+![alt text](<Screenshot 2026-05-26 154111.png>)
+
 ## Stack
 
 - Frontend: React, Vite, Tailwind CSS, Recharts, Framer Motion, Lucide icons
