@@ -118,6 +118,27 @@ Use MongoDB or PostgreSQL to store:
 
 The database should be scalable and properly structured for Expense Splitter.
 
+Data Processing Requirements
+
+The system must include efficient data processing mechanisms for handling financial transactions and analytics.
+
+The application should:
+1. Process expense data in real-time for instant balance updates
+2. Aggregate group transactions efficiently for dashboard analytics
+3. Perform category-wise and monthly spending calculations
+4. Maintain transaction consistency during concurrent updates
+5. Handle duplicate expense detection using transaction validation logic
+6. Optimise settlement calculations using graph-based or greedy algorithms
+7. Preprocess uploaded bill data before storage
+8. Support pagination and filtering for large transaction datasets
+9. Cache frequently accessed dashboard summaries where required
+10. Generate AI insight datasets using processed historical expense records
+11. Maintain audit logs for transaction modifications
+12. Ensure data integrity during expense edits, deletions, and settlements
+13. Support scalable processing for multiple active groups and concurrent users
+14. Use asynchronous processing for notifications, AI insights, and image uploads
+15. Optimise database queries using indexing and aggregation pipelines
+
 Validation and Security Requirements
 
 The application must:
