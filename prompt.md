@@ -177,6 +177,7 @@ Backend
 1. Node.js with Express.js for Expense Splitter
 2. MongoDB or PostgreSQL for Expense Splitter
 3. JWT Authentication for Expense Splitter
+4. Use bcrypt for Hashing the Password
 
 Optional
 1. Cloudinary for bill uploads for Expense Splitter
