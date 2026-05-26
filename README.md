@@ -4,8 +4,8 @@ A full-stack MERN Expense Splitter for friends, roommates, flats, trips, and out
 
 ## Demo 
 
-![alt text](<Screenshot 2026-05-26 154419.png>)
-![alt text](<Screenshot 2026-05-26 154111.png>)
+![alt text](<Register.png>)
+![alt text](<dashboard.png>)
 
 ## Stack
 
